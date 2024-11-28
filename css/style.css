@@ -1,0 +1,322 @@
+/* --- GENERAL --- */
+body {
+    background-color: #121212; /* Fond sombre de secours si l'image ne charge pas */
+    background-image: url('/img/fond.jpg'); /* Remplacez ceci par le chemin de votre image */
+    background-size: cover; /* Couvre toute la page avec l'image */
+    background-position: center center; /* Centre l'image sur la page */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    color: #E0E0E0; /* Texte clair */
+    font-family: 'Arial', sans-serif; /* Typographie générale */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garantit que le body prend toute la hauteur de la page */
+}
+
+/* --- HEADER --- */
+header {
+    color: #ffffff; /* Couleur lumineuse des textes */
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+header li {
+    display: inline-block;
+    margin: 10px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s, transform 0.3s ease;
+}
+
+header a:hover {
+    color: #ff0000; /* Change la couleur au survol */
+    transform: scale(1.1); /* Zoom au survol */
+}
+/* --- PHOTO DE PROFIL --- */
+.photo-profile {
+    width: 150px; /* Ajustez cette largeur selon vos besoins */
+    height: 150px; /* Garde une hauteur égale à la largeur pour obtenir un cercle */
+    border-radius: 50%; /* Bords arrondis pour obtenir une forme circulaire */
+    object-fit: cover; /* L'image garde son aspect sans être déformée */
+    margin-top: 20px; /* Ajoute un espacement au dessus de l'image */
+    transition: transform 0.3s ease; /* Animation pour l'effet de survol */
+}
+
+.photo-profile:hover {
+    transform: scale(1.1); /* Agrandissement au survol */
+}
+
+/* --- MAIN --- */
+main {
+    flex: 1; /* Permet à main de prendre tout l'espace disponible */
+    padding: 40px;
+}
+
+/* --- SECTION --- */
+section {
+    margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+/* --- PROJET HTML --- */
+#Projet_html {
+    display: flex; /* Aligne le texte et l'image horizontalement */
+    flex-direction: column; /* Aligne les éléments en colonne par défaut */
+    align-items: center; /* Centre les éléments */
+    justify-content: center;
+    margin-bottom: 40px;
+    h2{
+        color: #ee0c0c; /* Rouge */
+        font-size: 2rem;
+        margin-bottom: 20px; /* Espace sous le titre */
+    }
+}
+
+.texte_html {
+    text-align: center; /* Centre le texte */
+    display: flex; /* Utilise Flexbox pour aligner les éléments */
+    flex-direction: row; /* Aligne le contenu en ligne */
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: center; /* Centre les éléments verticalement */
+    gap:30px;
+}
+
+.texte_html p {
+    font-size: 1.2rem;
+    color: #ccc;
+    line-height: 1.6;
+    display: inline-block; /* Garde le texte sur la même ligne que l'image */
+    margin-right: 20px; /* Espacement entre le texte et l'image */
+    max-width: auto; /* Limite la largeur du texte */
+}
+
+.texte_html img {
+    display: inline-block; /* Garde l'image sur la même ligne que le texte */
+    max-width: 70%; /* Limite la taille de l'image */
+    height: auto;
+    border-radius: 8px; /* Ajoute des bords arrondis à l'image */
+    cursor: zoom-in;
+}
+.texte_html img:hover {
+    transform: scale(1.1); /* Zoom au survol */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Lueur autour de l'image */
+}
+
+.texte_html img:active{
+    transform: scale(2); /* Zoom de l'image */
+    position: fixed;  /* Fixe la position sur l'écran */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.3); /* Centrage et agrandissement */
+    z-index: 1000;
+}
+
+.queries {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px; /* Espacement entre l'image et la section .queries */
+    margin-bottom: 40px; /* Espacement avec la prochaine section */
+}
+
+.queries img {
+    max-width: 20%; /* Réduit la taille des images à 20% de la largeur du conteneur */
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.queries img:hover {
+    transform: scale(1.1); /* Zoom au survol */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Lueur autour de l'image */
+}
+
+.queries a{
+    align-self: center;
+    color: white;
+    text-decoration: none;
+}
+.queries a:hover{
+    transform: scale(1.1); /* Zoom au survol */
+}
+
+/* --- PROJET PYTHON --- */
+#Projet_python {
+    margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.texte_python h2 {
+    text-align: center;
+    color: #ee0c0c;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.texte_python p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.img_python {
+    display: flex;
+    justify-content: flex-start; /* Aligne les images à gauche */
+    gap: 10px;
+    align-items: center;
+}
+
+.img_python img {
+    width: 50%; /* Réduit la taille de l'image pour qu'elle prenne 50% de la largeur du conteneur */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img_python img:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Lueur autour de l'image */
+}
+
+/* --- PROJET PERSO --- */
+#Projet_perso {
+    margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.texte_perso h2 {
+    text-align: center;
+    color: #ee0c0c;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.texte_perso p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.img_perso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_perso img, .img_perso video {
+    width: 70%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img_perso img:hover, .img_perso video:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Lueur autour de l'image */
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 20px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+footer .Reseaux ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .Reseaux li {
+    display: inline-block;
+    margin: 10px;
+}
+
+footer .Reseaux a {
+    color: #00bcd4;
+    font-size: 24px;
+    transition: color 0.3s, transform 0.3s ease;
+}
+
+footer .Reseaux img:hover {
+    transform: scale(1.2); /* Zoom au survol */
+}
+
+/* --- MEDIA QUERIES --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header h2 {
+        font-size: 1.2rem;
+    }
+
+    header a {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    /* SECTION HTML */
+    #Projet_html {
+        flex-direction: column; /* Aligne le texte et l'image en colonne sur les petits écrans */
+    }
+
+    .texte_html {
+        padding-right: 0; /* Retire l'espacement sur les petits écrans */
+        margin-bottom: 20px;
+    }
+
+    .img_html {
+        margin-top: 20px; /* Espacement entre le texte et l'image */
+    }
+
+    /* SECTION PYTHON */
+    .img_python {
+        flex-direction: column; /* Aligne les images en colonne sur les petits écrans */
+    }
+
+    /* SECTION PERSO */
+    .img_perso {
+        flex-direction: column; /* Aligne les images et vidéos en colonne sur les petits écrans */
+    }
+
+    /* Repositionne .queries sous l'image */
+    .queries {
+        margin-top: 20px; /* Laisse de l'espace entre le texte et les images */
+    }
+}
