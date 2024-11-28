@@ -1,7 +1,7 @@
 /* --- GENERAL --- */
 body {
     background-color: #121212; /* Fond sombre de secours si l'image ne charge pas */
-    background-image: url('/img/fond.jpg'); /* Remplacez ceci par le chemin de votre image */
+    background-image: url('./img/fond.jpg'); /* Remplacez ceci par le chemin de votre image */
     background-size: cover; /* Couvre toute la page avec l'image */
     background-position: center center; /* Centre l'image sur la page */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
